@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romance Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='romance.css') }}">
+    <!-- this below link is gor font texting -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Romance Books</h1>
+        <p>Fall in love with stories that touch your heart. Romance novels capture the magic of relationships, emotions,
+            and unforgettable connections.</p>
+    </header>
+
+    <main>
+        <!-- Featured Books Section -->
+        <section class="featured-books">
+            <h2>Featured Romance Books</h2>
+            <div class="books-container">
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book17.jpg') }}"alt="Book 1">
+                    <h3>Pride and Prejudice</h3>
+                    <p>By Jane Austen</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book18.jpg') }}" alt="Book 2">
+                    <h3>The Notebook</h3>
+                    <p>By Nicholas Sparks</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book19.jpeg') }}" alt="Book 3">
+                    <h3>Me Before You</h3>
+                    <p>By Jojo Moyes</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book20.jpg') }}"alt="Book 4">
+                    <h3>Outlander</h3>
+                    <p>By Diana Gabaldon</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <blockquote>
+                <p>"A great romance is not about how much you say 'I love you,' but how much you prove that it's true."
+                    - Unknown</p>
+            </blockquote>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    border: border-box;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    background-color:  rgba(136, 90, 192, 0.4);
+    display: flex;
+}
+
+body {
+    background-image: url('/static/b6.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    background-attachment:fixed; /*   background-attachment: fixed; Keeps the image in place while scrolling */
+    margin: 0; /* Ensures no margin around the body */
+    height: 100vh; /* Sets the height of the body to the full viewport height */
+    width: 100vw; /* Sets the width of the body to the full viewport width */
+}
+.para2 {
+    margin-left: 700px;
+    font-size: 30px;
+    color: rgb(17, 2, 2);
+}
+
+h1 {
+    color: rgb(17, 2, 2);
+    padding-top: 35px;
+    font-size: 30px;
+    padding-left: 20px;
+    font-weight: 5000px;
+}
+/* Style for the search container */
+.search-container {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    margin-left: 720px; /*align-items: center;  Center the items horizontally */
+    margin-top: 30px; /* Add spacing from the top */
+}
+
+/* Style for the search box */
+.search-box {
+    width: 350px; /* Width of the input box */
+    height: 55px; /* Height of the input box */
+    font-size: 20px; /* Font size for input text */
+    border: 2px solid rgb(17, 2, 2); /* Border style */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0 10px;  /* Add padding inside the input */
+    outline: none;  /* Remove the outline on focus */
+    margin-bottom: 15px;  /* Space below the input */
+}
+/* Style for the submit button */
+.submit-button {
+    width: 120px;  /* Width of the button */
+    height: 40px;  /* Height of the button */
+    font-size: 16px;  /* Font size for button text */
+    background-color: rgb(240, 34, 11);  /* Button background color */
+    color: white;   /* Text color */
+    border: none;   /* Remove the default border */
+    border-radius: 5px;   /* Rounded corners */
+    cursor: pointer;   /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease;   /* Smooth hover effect */
+    margin-left: 125px;
+    margin-top: 15px;
+}
+/* Hover effect for the submit button */
+.submit-button:hover {
+    background-color: rgb(12, 15, 210); /* Darker shade on hover */
+}
+h3 {
+    color: rgb(17, 2, 2);
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 500px;
+}
+.styled-image {
+    margin-top: 50px;  /* border: 9px solid rgb(17, 2, 2);*/
+    border-radius: 20px;
+    width: 200px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    gap: 20px; /* Add spacing between items */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px;  /* Add some padding around the container */
+}
+.box1 {
+
+    height: 550px;
+    width: 400px;
+    text-align: center;
+    background-color: #fff; /* Optional: Add a background color */
+    border: 8px solid rgb(17, 2, 2, 0.5); /* Optional: Add a border */
+    border-radius: 20px; /* Optional: Add rounded corners */
+}

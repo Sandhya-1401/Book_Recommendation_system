@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiction Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fiction.css') }}">
+    <!-- this below link is gor font texting -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Fiction Books</h1>
+        <p>Explore captivating stories, imaginative worlds, and unforgettable characters. </p>
+        <p>Fiction books take you on an unparalleled journey of creativity and adventure.</p>
+    </header>
+
+    <main>
+        <!-- Featured Books Section -->
+        <section class="featured-books">
+            <h2>Featured Fiction Books</h2>
+            <div class="books-container">
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book1.jpg') }}" alt="Book 1">
+                    <h3 >The Great Gatsby</h3>
+                    <p>By F. Scott Fitzgerald</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book2.jpg') }}" alt="Book 2">
+                    <h3>1984</h3>
+                    <p>By George Orwell</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book3.jpeg') }}" alt="Book 3">
+                    <h3>To Kill a Mockingbird</h3>
+                    <p>By Harper Lee</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book4.jpeg') }}" alt="Book 4">
+                    <h3>Harry Potter</h3>
+                    <p>By J.K. Rowling</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <blockquote>
+                <b>
+                    <p>"A reader lives a thousand lives before he dies. The man who never reads lives only one." -
+                        George R.R. Martin</p>
+                </b>
+            </blockquote>
+        </section>
+    </main>
+</body>
+
+</html>

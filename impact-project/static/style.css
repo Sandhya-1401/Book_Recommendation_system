@@ -1,0 +1,60 @@
+style.css * {
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    border: border-box;
+}
+
+body {
+    background-color: rgba(136, 90, 192, 0.4);
+}
+
+.nvas{
+    background-color: rgba(136, 90, 192, 0.7);
+    padding-top:0%;
+    text-align: center;
+}
+
+h1 {
+      
+    color: rgb(17, 2, 2);
+    padding-top: 50px;
+    font-size: 35px;
+    font-weight: 6000px;
+    text-align: center;
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    gap: 20px; /* Add spacing between items */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px; /* Add some padding around the container */
+}
+
+.styled-image {
+    margin-top: 50px; /* border: 9px solid rgb(17, 2, 2);*/
+    border-radius: 20px;
+    width: 200px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.box1 {
+
+    height: 610px;
+    width: 400px;
+    text-align: center;
+    background-color: #fff; /* Optional: Add a background color */
+    border: 3px solid rgb(17, 2, 2); /* Optional: Add a border */
+    border-radius: 20px; /* Optional: Add rounded corners */
+    font-size: 22px;
+    font-family: arial, sans-serif;
+    font-weight: 60px;
+}
+
+h2 {
+    color: rgb(17, 2, 2);
+    padding-top: 1px;
+    font-size: 23px;
+    font-weight: 600px;
+}

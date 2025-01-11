@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 50 Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="nvas">
+        <h1>Top 50 - Most Popular Books 📖</h1>
+    </nav>
+    
+    <div class="container">
+
+        {% for book in books %}
+
+        <div class="box1">
+            <img src="{{ book.image }}" alt="Book Cover" class="styled-image">
+            <h2>{{ book.title }}</h2>
+            <b><p>Author : {{ book.author }}</p></b>
+            <b><p>Votes : {{ book.vote }}</p></b>
+            <b><p>Rating : {{ book.rating }}</p></b>
+        </div>
+
+        {% endfor %}
+    </div>
+</body>
+</html>

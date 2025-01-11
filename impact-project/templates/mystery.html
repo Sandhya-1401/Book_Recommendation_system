@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mystery.css') }}">
+    <!-- this below link is gor font texting -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Mystery Books</h1>
+        <p>Uncover secrets, solve intriguing puzzles, and dive into thrilling tales of suspense. Mystery books keep you
+            guessing until the very end.</p>
+    </header>
+
+    <main>
+        <!-- Featured Books Section -->
+        <section class="featured-books">
+            <h2>Featured Mystery Books</h2>
+            <div class="books-container">
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book9.jpg') }}"alt="Book 1">
+                    <h3>The Girl with the Dragon Tattoo</h3>
+                    <p>By Stieg Larsson</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book10.jpg') }}" alt="Book 2">
+                    <h3>Gone Girl</h3>
+                    <p>By Gillian Flynn</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book11.jpg') }}" alt="Book 3">
+                    <h3>The Da Vinci Code</h3>
+                    <p>By Dan Brown</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book__.jpg') }}" alt="Book 4">
+                    <h3>Big Little Lies</h3>
+                    <p>By Liane Moriarty</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <blockquote>
+                <p>"The mystery story is two stories in one: the story of what happened and the story of what appeared
+                    to happen." - Mary Roberts Rinehart</p>
+            </blockquote>
+        </section>
+    </main>
+
+</body>
+
+</html>

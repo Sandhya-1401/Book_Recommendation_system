@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recommand</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='book.css')}}" />
+</head>
+
+<body>
+    <nav>
+        <h1><b>My Book Recommandation System</b></h1>
+    </nav>
+    <h2 class="para2">
+        Search Your Book Here to know what should read next
+    </h2>
+    <form action="/recommand_book" method="post">
+        <div class="search-container">
+            <input name="user_input" type="text" class="search-box" placeholder="Search for your next great read... 📚">
+            <button class="submit-button">Submit</button>
+        </div>
+    </form>
+    <div class="container">
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        {% if data %}
+            {% for i in data %}
+            <div class="box1">
+                <img src="{{ i[2] }}" alt="OKK" class="styled-image" />
+                <h3>{{ i[0] }}</h3>
+                <h3>Author :- {{ i[1] }}</h3>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <!-- this below link is gor font texting -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+    <!-- this below link is for naviation button -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav>
+        <div class="left-section">
+            <img src="{{ url_for('static', filename='book.png') }}" alt="Logo" class="logo">
+            <h1>My Book Recommendation System</h1>
+        </div>
+        <div class="right-section">
+            <img src="{{ url_for('static', filename='account.png') }}" alt="User Icon" class="user-icon">
+            <img src="{{ url_for('static', filename='menu.png') }}" alt="Menu Icon" class="menu-icon"
+                onclick="toggleMenu()">
+        </div>
+    </nav>
+    <div id="menu-card" class="menu-card">
+        <ul>
+            <b>
+                <li><a href="{{ url_for('home') }}">🏡 Home</a></li>
+            </b>
+            <b>
+                <li><a href="{{ url_for('index') }}">📚 Popular Books</a></li>
+            </b>
+            <b>
+                <li><a href="{{ url_for('recommand_book') }}">📒 What Should Read Next</a></li>
+            </b>
+            <b>
+                <li><a href="{{ url_for('about_us') }}">📝 About Us</a></li>
+            </b>
+            <b>
+                <li><a href="{{ url_for('contact') }}">📞 Contact</a></li>
+            </b>
+        </ul>
+    </div>
+    <h4>Search Your Book Here 👇</h4>
+    <form id="searchForm" action="/search" method="POST">
+        <div class="search-container">
+            <input id="searchBox" name="user_input" type="text" class="search-box" placeholder="Search for a Book...📚">
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+        <div class="search-result"></div>
+    </form>
+
+    <div class="categories-section">
+        <h2>Explore by Categories</h2>
+    
+        <div class="categories-container">
+    
+            <div class="categories-wrapper">
+                <!-- Fiction Category -->
+                <a href="{{ url_for('fiction_page') }}" class="category-link">
+                    <div class="category-card">
+                        <img src="{{ url_for('static', filename='fiction.jpg') }}" alt="Fiction">
+                        <h3>Fiction</h3>
+                    </div>
+                </a>
+    
+                <!-- Non-Fiction Category -->
+                <a href="{{ url_for('non_fiction_page') }}" class="category-link">
+                    <div class="category-card">
+                        <img src="{{ url_for('static', filename='non-fiction.jpg') }}" alt="Non-Fiction">
+                        <h3>Non-Fiction</h3>
+                    </div>
+                </a>
+    
+                <!-- Mystery Category -->
+                <a href="{{ url_for('mystery_page') }}" class="category-link">
+                    <div class="category-card">
+                        <img src="{{ url_for('static', filename='mystery.jpg') }}" alt="Mystery">
+                        <h3>Mystery</h3>
+                    </div>
+                </a>
+    
+                <!-- Romance Category -->
+                <a href="{{ url_for('romance_page') }}" class="category-link">
+                    <div class="category-card">
+                        <img src="{{ url_for('static', filename='romance.jpg') }}" alt="Romance">
+                        <h3>Romance</h3>
+                    </div>
+                </a>
+    
+                <!-- Fantasy Category -->
+                <a href="{{ url_for('fantasy_page') }}" class="category-link">
+                    <div class="category-card">
+                        <img src="{{ url_for('static', filename='fantacy.jpg') }}" alt="Fantasy">
+                        <h3>Fantasy</h3>
+                    </div>
+                </a>
+                
+            </div>
+    
+            <button class="prev-btn" onclick="scrollLeft()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn" onclick="scrollRight()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="quote">
+        <b>" A Reader Lives A Thousand Lives Before He Dies " - George R.R. Martin</b>
+    </div>
+
+    <div class="overlay-image">
+        <img src="{{ url_for('static', filename='qt.png') }}" alt="Overlay Image">
+    </div>
+
+    <div class="quote">
+        <b>" Once You Learn To Read, You Will Be Forever Free " - Frederick Douglass</b>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- About Us Section -->
+            <div class="footer-about">
+                <h2>About Us</h2>
+                <p>Welcome to our Book Recommendation System, where we help you discover your next favorite read with
+                    the best recommendations curated just for you</p>
+                <p>Enjoy..🙂</p>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>Email: <a href="ranasandhya093@gmail.com">ranasandhya093@gmail.com</a></li>
+                    <li>Phone: +91 8200397435</li>
+                    <li>Address: Vadodara, Gujarat, India.</li>
+                </ul>
+            </div>
+
+            <!-- Important Links Section -->
+            <div class="footer-links">
+                <h2>Important Links</h2>
+                <ul>
+                    <li><a href="#">Our System</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us Section -->
+            <div class="footer-social">
+                <h2>Follow Us</h2>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="{{ url_for('static', filename='facebook-icon.png') }}" alt="Facebook"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/san_rana.1729/"><img
+                                src="{{ url_for('static', filename='instagram-icon.png') }}" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="{{ url_for('static', filename='bookmark-icon.png') }}" alt="LinkedIn"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Book Recommendation System. All Rights Reserved.</p>
+            <p>Designed by Sandhya Rana</p>
+            <p><a href="#">Subscribe to our Newsletter</a></p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

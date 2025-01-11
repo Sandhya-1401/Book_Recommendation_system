@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Fiction Books</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='non_fiction.css')}}" />
+    <!-- this below link is gor font texting -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Non-Fiction Books</h1>
+        <p>Discover the real world through insightful biographies, thought-provoking essays, and factual storytelling.
+            Non-fiction books enrich knowledge and expand perspectives.</p>
+    </header>
+
+    <main>
+        <!-- Featured Books Section -->
+        <section class="featured-books">
+            <h2>Featured Non-Fiction Books</h2>
+            <div class="books-container">
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book_5.png') }}" alt="Book 1">
+                    <h3>Sapiens</h3>
+                    <p>By Yuval Noah Harari</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book6.jpeg') }}" alt="Book 2">
+                    <h3>Becoming</h3>
+                    <p>By Michelle Obama</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book7.jpg') }}" alt="Book 3">
+                    <h3>Educated</h3>
+                    <p>By Tara Westover</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book8.jpeg') }}" alt="Book 4">
+                    <h3>Atomic Habits</h3>
+                    <p>By James Clear</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <blockquote>
+                <p>"Books are the carriers of civilization. Without books, history is silent, literature dumb, science
+                    crippled, thought and speculation at a standstill." - Barbara Tuchman</p>
+            </blockquote>
+        </section>
+    </main>
+
+</body>
+
+</html>

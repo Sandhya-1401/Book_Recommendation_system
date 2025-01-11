@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Books</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fantasy.css') }}">
+    <!-- this below link is gor font texting -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>Fantasy Books</h1>
+        <p>Step into magical worlds, meet mythical creatures, and explore realms of wonder and adventure.</p>
+    </header>
+
+    <main>
+        <!-- Featured Books Section -->
+        <section class="featured-books">
+            <h2>Featured Fantasy Books</h2>
+            <div class="books-container">
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book13.jpg') }}" alt="Book 1">
+                    <h3>The Hobbit</h3>
+                    <p>By J.R.R. Tolkien</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book4.jpeg') }}" alt="Book 2">
+                    <h3>Harry Potter</h3>
+                    <p>By J.K. Rowling</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book14.jpg') }}"alt="Book 3">
+                    <h3>The Name of the Wind</h3>
+                    <p>By Patrick Rothfuss</p>
+                </div>
+
+                <div class="book-card">
+                    <img src="{{ url_for('static', filename='book15.jpg') }}" alt="Book 4">
+                    <h3>A Song of Ice and Fire</h3>
+                    <p>By George Martin</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <blockquote>
+                <p>"Fantasy is hardly an escape from reality. It's a way of understanding it." - Lloyd Alexander</p>
+            </blockquote>
+        </section>
+    </main>
+
+</body>
+
+</html>
